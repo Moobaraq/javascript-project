@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f5f8;
+    color: #000000;
+    text-align: center;
+}
+.container{
+    transform: translateY(30vh);
+}
+h1{
+    font-size: 4rem;
+}
+#value{
+    font-size: 5rem;
+    font-weight: 1000;
+}
+.btn{
+    padding: 5px 10px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: background 1s ease-out;
+}
+.decrease:hover{
+    background-color: red;
+    color: yellow;
+}
+.reset:hover{
+    background-color: black;
+    color: yellow;
+}
+.increase:hover{
+    background-color: green;
+    color: yellow;
+}
