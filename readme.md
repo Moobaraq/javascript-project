@@ -5,3 +5,4 @@
 These contain cool javascript project built by #####ME and are listed below
 1. Color changer
 2. Counter project
+3. Landing page with menu and modal
