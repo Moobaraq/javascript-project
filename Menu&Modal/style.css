@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(184, 184, 184);
+  width: 100%;
+  align-items: center;
+  transition: 0.4s ease-out;
+}
+body.show-nav {
+  transform: translateX(200px);
+  width: calc(100% - 200px);
+  transition: 0.6s ease-in;
+}
+nav {
+  background-color: rgb(6, 38, 179, 0.5);
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  border-right: 2px solid rgba(2, 6, 54, 0.5);
+  transform: translateX(-100%);
+}
+nav .logo {
+  padding: 30px 0;
+  text-align: center;
+}
+nav .logo img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  border-bottom: 2px solid rgba(2, 6, 54, 0.5);
+  padding: 20px;
+}
+nav ul li:first-of-type {
+  border-top: 2px solid rgba(2, 6, 54, 0.5);
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+header {
+  background-color: rgb(6, 38, 179, 0.5);
+  color: white;
+  font-size: 130%;
+  position: relative;
+  padding: 50px 20px;
+  text-align: center;
+}
+header p {
+  margin: 30px 0;
+}
+button {
+  background-color: rgb(6, 38, 179, 0.8);
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+.menu {
+  background-color: rgb(0, 0, 0, 0.7);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.sign-up {
+  pad: 12px 30px;
+  font-size: 20px;
+}
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+.container h2 {
+  text-transform: capitalize;
+  padding-top: 30px;
+}
+.container ul {
+  padding-left: 30px;
+}
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+.modal-container.show-modal {
+  display: block;
+}
+.modal {
+  position: absolute;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 100%;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: modalopen;
+  animation-duration: 2s;
+  text-transform: capitalize;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal-header {
+  background-color: rgb(6, 38, 179, 0.8);
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  font-size: 25px;
+  margin: 20px 10px;
+}
+.modal-content p {
+  text-align: center;
+  margin: 10px 30px;
+}
+.modal-form {
+  margin: 10px;
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-control input {
+  display: block;
+  width: 100%;
+  border: 2px solid rgb(172, 172, 172);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 10px;
+}
+.form-control input:focus {
+  outline: none;
+  border-color: rgb(99, 99, 99);
+}
+.form-control.success input {
+  border-color: green;
+}
+.form-control.error input {
+  border-color: red;
+}
+.form-control small {
+  position: absolute;
+  visibility: hidden;
+  font-style: italic;
+  left: 0;
+  color: red;
+}
+.form-control.error small {
+  visibility: visible;
+}
+.submit {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  border: 2px solid rgb(6, 38, 179, 0.8);
+}
