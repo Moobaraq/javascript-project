@@ -1,0 +1,6 @@
+const difficulty = document.getElementById('difficulty')
+const word = document.getElementById('word')
+const text = document.getElementById('text')
+const scoreElement = document.getElementById('score')
+const timeElement = document.getElementById('time')
+const endgameElement = document.getElementById('end-game-container')
