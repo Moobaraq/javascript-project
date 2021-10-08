@@ -9,3 +9,4 @@ These contain cool javascript project built by #####ME and are listed below
 4. New Year Countdown
 5. Typing Game
 6. Food Menu
+7. Relaxer 
