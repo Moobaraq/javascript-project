@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s all linear;
+}
+html {
+  font-size: 65%;
+}
+body {
+  background-image: url(./bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: 700;
+  padding: 100px 0;
+  position: relative;
+}
+h2 {
+  margin-bottom: 5rem;
+  color: white;
+}
+.container {
+  background: linear-gradient(#ffc10773, #ab47bc73);
+  min-height: 100vh;
+}
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+form {
+  position: relative;
+  width: 50rem;
+  max-width: 100%;
+}
+form input {
+  border: 0;
+  border-radius: 50px;
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+form button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 13px 30px;
+  border-radius: 50px;
+  border: 0;
+  font-size: 2rem;
+  background: linear-gradient(#ffc10773, #ab47bc73);
+}
+button {
+  cursor: pointer;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+button:active {
+  transform: scale(0.9);
+}
+.btn {
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  padding: 8px 15px;
+  background: black;
+  font-size: 1.5rem;
+}
+ul.songs {
+  list-style: none;
+  padding: 0;
+}
+ul.songs li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.result {
+  margin: 30px auto;
+  max-width: 100%;
+  width: 50rem;
+  font-size: 1.8rem;
+}
+.result h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.centered {
+  display: flex;
+  justify-content: center;
+}
+.centered button {
+  transform: scale(1.2);
+  margin: 15px;
+}
+@media (max-width: 520px) {
+  html {
+    font-size: 55%;
+  }
+  form input {
+    padding: 10px 20px;
+  }
+  form button {
+    padding: 8px 15px;
+  }
+  header {
+    padding: 30px auto;
+  }
+  .result {
+    margin: 15px auto;
+  }
+}
