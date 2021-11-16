@@ -5,7 +5,7 @@ const more = document.getElementById('more')
 const body = document.querySelector('body')
 const container = document.getElementsByClassName('container')
 
-const apiURL = 'http://api.lyrics.ovh'
+const apiURL = 'https://cors-anywhere.herokuapp.com/api.lyrics.ovh'
 
 async function searchSongs(term){
   const res = await fetch(`${apiURL}/suggest/${term}`)
@@ -14,6 +14,7 @@ async function searchSongs(term){
 }
 
 function showData(data){
+  console.log(data);
   let output = ""
 
   data.data.forEach(song => {
@@ -29,17 +30,17 @@ function showData(data){
     ${output}
   </ul>
   `
-  body.style.backgroundImage = 'url(./bg.jpg)'
-  container.style.backgroundColor = 'linear-gradient(#ffc10773, #ab47bc73)'
 
   if(data.prev || data.next) {
     more.innerHTML = `
-      ${data.prev ? `<button class='btn' onclick = "getMoreSongs('${data.prev}')">Prev</button>` : ""}
-      ${data.next ? `<button class='btn' onclick="getMoreSongs('${data.next}')">Next</button>` : ""}
+      ${data.prev ? `<button class='btn' onclick = "getMoreSongs('https://cors-anywhere.herokuapp.com/${data.prev}')">Prev</button>` : ""}
+      ${data.next ? `<button class='btn' onclick="getMoreSongs('https://cors-anywhere.herokuapp.com/${data.next}')">Next</button>` : ""}
     `
   }else{
     more.innerHTML = ''
   }
+  body.style.backgroundImage = 'url(./bg.jpg)'
+  container.style.backgroundColor = 'linear-gradient(#ffc10773, #ab47bc73)'
 }
 
 async function getMoreSongs(url) {
@@ -55,6 +56,7 @@ async function getLyrics(artist, songTitle){
   const data = await res.json()
 
   const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>')
+
 
   result.innerHTML = `
     <h2><strong>${artist}</strong> - ${songTitle}</h2>
